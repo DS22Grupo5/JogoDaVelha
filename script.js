@@ -65,6 +65,10 @@ function casa_0() { // Quando clicar em um input, será atribuído O ou X por es
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
 		res.innerHTML = `Empate!`
+		setTimeout(function(){
+			alert(`Empate!`)
+			
+		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
@@ -88,6 +92,10 @@ function casa_1() { // Quando clicar em um input, será atribuído O ou X por es
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
 		res.innerHTML = `Empate!`
+		setTimeout(function(){
+			alert(`Empate!`)
+			
+		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
@@ -113,6 +121,11 @@ function casa_2() { // Quando clicar em um input, será atribuído O ou X por es
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
 		res.innerHTML = `Empate!`
+		setTimeout(function(){
+			alert(`Empate!`)
+			
+		}, 500)
+
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
@@ -137,6 +150,11 @@ function casa_3() { // Quando clicar em um input, será atribuído O ou X por es
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
 		res.innerHTML = `Empate!`
+		setTimeout(function(){
+			alert(`Empate!`)
+			
+		}, 500)
+
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
@@ -162,6 +180,10 @@ function casa_4() { // Quando clicar em um input, será atribuído O ou X por es
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
 		res.innerHTML = `Empate!`
+		setTimeout(function(){
+			alert(`Empate!`)
+			
+		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
@@ -187,6 +209,10 @@ function casa_5() { // Quando clicar em um input, será atribuído O ou X por es
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
 		res.innerHTML = `Empate!`
+		setTimeout(function(){
+			alert(`Empate!`)
+			
+		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
@@ -212,6 +238,10 @@ function casa_6() { // Quando clicar em um input, será atribuído O ou X por es
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
 		res.innerHTML = `Empate!`
+		setTimeout(function(){
+			alert(`Empate!`)
+			
+		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
@@ -237,6 +267,10 @@ function casa_7() { // Quando clicar em um input, será atribuído O ou X por es
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
 		res.innerHTML = `Empate!`
+		setTimeout(function(){
+			alert(`Empate!`)
+			
+		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
@@ -262,6 +296,10 @@ function casa_8() { // Quando clicar em um input, será atribuído O ou X por es
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
 		res.innerHTML = `Empate!`
+		setTimeout(function(){
+			alert(`Empate!`)
+			
+		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
@@ -316,7 +354,7 @@ function verificador_vitoria() {
 		casas[5].style.backgroundColor = '#add8e6'
 		res.style.color = '#ffffff'
 		setTimeout(function(){
-			alert(`${casas[0].value} venceu`)
+			alert(`${casas[3].value} venceu`)
 			
 		}, 500)
 		res.innerHTML = `${casas[3].value} venceu`
@@ -331,7 +369,7 @@ function verificador_vitoria() {
 		casas[8].style.backgroundColor = '#add8e6'
 		res.style.color = '#ffffff'
 		setTimeout(function(){
-			alert(`${casas[0].value} venceu`)
+			alert(`${casas[6].value} venceu`)
 			
 		}, 500)
 		res.innerHTML = `${casas[6].value} venceu`
@@ -361,7 +399,7 @@ function verificador_vitoria() {
 		casas[7].style.backgroundColor = '#add8e6'
 		res.style.color = '#ffffff'
 		setTimeout(function(){
-			alert(`${casas[0].value} venceu`)
+			alert(`${casas[1].value} venceu`)
 			
 		}, 500)
 		res.innerHTML = `${casas[1].value} venceu`
@@ -376,7 +414,7 @@ function verificador_vitoria() {
 		casas[8].style.backgroundColor = '#add8e6'
 		res.style.color = '#ffffff'
 		setTimeout(function(){
-			alert(`${casas[0].value} venceu`)
+			alert(`${casas[2].value} venceu`)
 			
 		}, 500)
 		res.innerHTML = `${casas[2].value} venceu`
@@ -407,7 +445,7 @@ function verificador_vitoria() {
 		casas[6].style.backgroundColor = '#add8e6'
 		res.style.color = '#ffffff';
 		setTimeout(function(){
-			alert(`${casas[0].value} venceu`)
+			alert(`${casas[2].value} venceu`)
 			
 		}, 500)
 		res.innerHTML = `${casas[2].value} venceu`
@@ -418,6 +456,7 @@ function verificador_vitoria() {
 	}
 
 	else {//se não houve vencedor
+
 		numero_de_jogadas++
 		return '_'
 	}
