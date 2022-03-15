@@ -1,0 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+    font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+}
+
+
+body {
+
+	background: linear-gradient(90deg, rgba(8,248,255,1) 0%, rgba(103,27,235,1) 35%, rgba(255,0,206,1) 91%);
+	text-align: center;
+	font-style:italic;
+	
+}
+
+#vez{
+margin-bottom: 20px;
+}
+
+#res{
+	
+	color: transparent;
+	font-size: 4vh;
+	
+}
+
+main{
+margin-top: 25px;
+}
+
+h1{
+    padding-top: 40px;
+}
+
+input {
+	color: transparent;/*deixa os inputs(_) transparentes*/
+	background-color:#ffffff;
+	font-size: 6vw; /*tamanho da fonte em view width*/
+	width: 8vw; /*largura*/
+	height:8vw;/*altura*/
+	border-color: aqua;
+}
+
+
+#reiniciar {
+	margin-top: 2%;
+	margin-bottom: 5px;
+	width: 12vw;
+	height:6vw;
+	font-size: 1.3em;
+	color: rgb(255, 255, 255);
+    border-radius: 25px;
+	border: none;
+	background: rgb(19, 143, 245);
+	cursor: pointer;
+}
+
+
+  #reiniciar:hover {
+	background-color: #5dcefa; 
+	color: white;
+  }
+
+  .botao_style{
+	color: transparent;/*deixa os inputs(_) transparentes*/
+	background-color:#ffffff;
+	font-size: 6vw; /*tamanho da fonte em view width*/
+	width: 8vw; /*largura*/
+	height:8vw;/*altura*/
+	border-color: aqua;	
+  }
+  .botao_style:hover{
+	color: transparent;/*deixa os inputs(_) transparentes*/
+	background-color:#ffffff;
+	font-size: 6vw; /*tamanho da fonte em view width*/
+	width: 8vw; /*largura*/
+	height:8vw;/*altura*/
+	border-color: aqua;
+  }
+
+  imagem:hover{
+	  display:block;
+  }
