@@ -61,24 +61,28 @@ input {
 	background-color: #5dcefa; 
 	color: white;
   }
+  .escolha_icone {
+	margin-top: 2%;
+	margin-bottom: 5px;
+	width: 12vw;
+	height:6vw;
+	font-size: 1.3em;
+	color: rgb(255, 255, 255);
+    border-radius: 25px;
+	border: none;
+	background: rgb(19, 143, 245);
+	cursor: pointer;
 
-  .botao_style{
-	color: transparent;/*deixa os inputs(_) transparentes*/
-	background-color:#ffffff;
-	font-size: 6vw; /*tamanho da fonte em view width*/
-	width: 8vw; /*largura*/
-	height:8vw;/*altura*/
-	border-color: aqua;	
   }
-  .botao_style:hover{
-	color: transparent;/*deixa os inputs(_) transparentes*/
-	background-color:#ffffff;
-	font-size: 6vw; /*tamanho da fonte em view width*/
-	width: 8vw; /*largura*/
-	height:8vw;/*altura*/
-	border-color: aqua;
+  .escolha_icone:hover{
+	background-color: #5dcefa; 
+	color: white;
   }
-
-  imagem:hover{
-	  display:block;
+  .seleciona_icone {
+	  background-color:rgb(19, 143, 245);
+	  border: transparent;
+	  border-radius: 30px;
+	  width: 200px;
+	  height: 60px;
+	  font-size: 40px;
   }

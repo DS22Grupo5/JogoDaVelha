@@ -461,8 +461,10 @@ function verificador_vitoria() {
 		return '_'
 	}
 
-
-
-
+}
+function novopopup(){
+	console.log('funcionou')
+	var janela = window.open('popup.html', 'popup', 'width=600 height=700')
+	
 }
 
