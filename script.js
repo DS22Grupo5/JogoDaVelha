@@ -57,6 +57,8 @@ function casa_0() { // Quando clicar em um input, será atribuído O ou X por es
 		casas[0].value = jogador //preenche a casa com X ou O
 		casas[0].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[0].value)
+		const music=new Audio('som/acerto.mp3');
+		music.play();
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
 		//se o vencedor existe, imprime
@@ -83,6 +85,8 @@ function casa_1() { // Quando clicar em um input, será atribuído O ou X por es
 	if ((casas[1].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
 		casas[1].value = jogador //preenche a casa com X ou O
 		casas[1].style.color = '#000000' //torna o valor da casa visível
+		const music=new Audio('som/acerto.mp3');
+		music.play();
 		console.log(casas[1].value)
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
@@ -110,6 +114,8 @@ function casa_2() { // Quando clicar em um input, será atribuído O ou X por es
 	if ((casas[2].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
 		casas[2].value = jogador //preenche a casa com X ou O
 		casas[2].style.color = '#000000' //torna o valor da casa visível
+		const music=new Audio('som/acerto.mp3');
+		music.play();
 		console.log(casas[2].value)
 
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
@@ -139,6 +145,8 @@ function casa_3() { // Quando clicar em um input, será atribuído O ou X por es
 	if ((casas[3].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
 		casas[3].value = jogador //preenche a casa com X ou O
 		casas[3].style.color = '#000000' //torna o valor da casa visível
+		const music=new Audio('som/acerto.mp3');
+		music.play();
 		console.log(casas[3].value)
 
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
@@ -169,6 +177,8 @@ function casa_4() { // Quando clicar em um input, será atribuído O ou X por es
 	if ((casas[4].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
 		casas[4].value = jogador //preenche a casa com X ou O
 		casas[4].style.color = '#000000' //torna o valor da casa visível
+		const music=new Audio('som/acerto.mp3');
+		music.play();
 		console.log(casas[4].value)
 
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
@@ -198,6 +208,8 @@ function casa_5() { // Quando clicar em um input, será atribuído O ou X por es
 	if ((casas[5].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
 		casas[5].value = jogador //preenche a casa com X ou O
 		casas[5].style.color = '#000000' //torna o valor da casa visível
+		const music=new Audio('som/acerto.mp3');
+		music.play();
 		console.log(casas[5].value)
 
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
@@ -227,6 +239,8 @@ function casa_6() { // Quando clicar em um input, será atribuído O ou X por es
 	if ((casas[6].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
 		casas[6].value = jogador //preenche a casa com X ou O
 		casas[6].style.color = '#000000' //torna o valor da casa visível
+		const music=new Audio('som/acerto.mp3');
+		music.play();
 		console.log(casas[6].value)
 
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
@@ -256,6 +270,8 @@ function casa_7() { // Quando clicar em um input, será atribuído O ou X por es
 	if ((casas[7].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
 		casas[7].value = jogador //preenche a casa com X ou O
 		casas[7].style.color = '#000000' //torna o valor da casa visível
+		const music=new Audio('som/acerto.mp3');
+		music.play();
 		console.log(casas[7].value)
 
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
@@ -285,6 +301,8 @@ function casa_8() { // Quando clicar em um input, será atribuído O ou X por es
 	if ((casas[8].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
 		casas[8].value = jogador //preenche a casa com X ou O
 		casas[8].style.color = '#000000' //torna o valor da casa visível
+		const music=new Audio('som/acerto.mp3');
+		music.play();
 		console.log(casas[8].value)
 
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
