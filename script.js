@@ -10,26 +10,117 @@ var jogador = '_' //Define o jogador atual (_ = jogador indefinido; X = jogador 
 var vencedor = '_' //Define se há um vencedor ou não (_ = indefinido; X = jogador X, O = jogador O) 
 var numero_de_jogadas = 0 //serve para descobrirmos se houve ou não empate (número de jogadas=9, tem empate)
 var existe_vencedor = false//serve para verificar se houve ou não vencedor, impedindo que haja mais de um ganhador em uma partida
+var jogador_escolhe = 0;
+var vez_jogador1;
+var vez_jogador2;
+function quadrado(){
+	
+	if (jogador_escolhe == 0){
+		vez_jogador1 = 'quadrado';
+		jogador_escolhe = 1
+
+	}
+	else{
+		vez_jogador2 = 'quadrado';
+		jogador_escolhe = 0;
+		window.close()
+		SelecionarJogador()
+		
+	}
+	//Define qual jogador começa o jogo ao rodar o programa
+	
+}
+function circulo_preenchido(){
+	
+	if (jogador_escolhe == 0){
+		vez_jogador1 = 'circulo_preenchido';
+		jogador_escolhe = 1
 
 
-//Define qual jogador começa o jogo ao rodar o programa
-SelecionarJogador()
+	}
+	else{
+		vez_jogador2 = 'circulo_preenchido';
+		jogador_escolhe = 0;
+		window.close()
+		SelecionarJogador()
+	
+	}
+	//Define qual jogador começa o jogo ao rodar o programa
+
+	
+}
+function circulo(){
+	
+	if (jogador_escolhe == 0){
+		vez_jogador1 = 'O';
+		jogador_escolhe = 1
+
+	}
+	else{
+		vez_jogador2 = 'O';
+		jogador_escolhe = 0;
+		window.close()
+		SelecionarJogador()
+		
+	}
+	//Define qual jogador começa o jogo ao rodar o programa
+	
+
+	
+}
+function funcaox(){
+	
+	if (jogador_escolhe == 0){
+		vez_jogador1 = 'X';
+		jogador_escolhe = 1
+
+	}
+	else{
+		vez_jogador2 = 'X';
+		jogador_escolhe = 0;
+		window.close();	
+		SelecionarJogador()
+	}
+	//Define qual jogador começa o jogo ao rodar o programa
+	
+}
+function estrela(){
+
+	if (jogador_escolhe == 0){
+		vez_jogador1 = 'estrela';
+		jogador_escolhe = 1
+	}
+	else{
+		vez_jogador2 = 'estrela';
+		jogador_escolhe = 0;
+		window.close()
+		SelecionarJogador()
+
+	}
+	//Define qual jogador começa o jogo ao rodar o programa
+	
+}
 
 function SelecionarJogador() { //Além de escolher quem inicia o jogo( no caso é a "O"), possibilita que troque a vez do jogador, mostrando no  canto inferior da tela
+	console.log(vez_jogador1)
+	console.log(vez_jogador2)
+
 	if (jogador == '_') { // Ao rodar o programa pela primeira vez, a O começa o jogo
 		jogador = vez_jogador1 //define o jogador O como atual
 		console.log("jogador: ", vez_jogador1)
-		label_jogador.innerText = "O" //exibe na página qual é o jogador atual
+		label_jogador.innerHTML = "O" //exibe na página qual é o jogador atual
 		label_jogador.style.color = '#ffffff' //deixa o texto na cor branca
+
 	} else if (jogador == vez_jogador1) {
+
 		jogador = vez_jogador2//define o jogador X como atual
-		label_jogador.innerText = "X" //exibe na página qual é o jogador atual
+		label_jogador.innerHTML = "X" //exibe na página qual é o jogador atual
 		label_jogador.style.color = '#ffffff'//deixa o texto na cor branca
 	}
 
 	else {
 		jogador = "O" //define o jogador O como atual
-		label_jogador.innerText = "O" //exibe na página qual é o jogador atual
+		label_jogador.innerHTML = "O" //exibe na página qual é o jogador atual
 		label_jogador.style.color = '#ffffff' //deixa o texto na cor branca
 	}
 }
@@ -49,7 +140,7 @@ function casa_0() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if ((casas[0].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
+	if ((casas[0].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
 		casas[0].value = jogador //preenche a casa com X ou O
 		casas[0].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[0].value)
@@ -76,7 +167,7 @@ function casa_1() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if ((casas[1].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
+	if ((casas[1].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
 		casas[1].value = jogador //preenche a casa com X ou O
 		casas[1].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[1].value)
@@ -103,7 +194,7 @@ function casa_2() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if ((casas[2].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
+	if ((casas[2].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
 		casas[2].value = jogador //preenche a casa com X ou O
 		casas[2].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[2].value)
@@ -132,7 +223,7 @@ function casa_3() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if ((casas[3].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
+	if ((casas[3].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
 		casas[3].value = jogador //preenche a casa com X ou O
 		casas[3].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[3].value)
@@ -162,7 +253,7 @@ function casa_4() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if ((casas[4].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
+	if ((casas[4].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
 		casas[4].value = jogador //preenche a casa com X ou O
 		casas[4].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[4].value)
@@ -191,7 +282,7 @@ function casa_5() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if ((casas[5].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
+	if ((casas[5].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
 		casas[5].value = jogador //preenche a casa com X ou O
 		casas[5].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[5].value)
@@ -220,7 +311,7 @@ function casa_6() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if ((casas[6].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
+	if ((casas[6].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
 		casas[6].value = jogador //preenche a casa com X ou O
 		casas[6].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[6].value)
@@ -249,7 +340,7 @@ function casa_7() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if ((casas[7].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
+	if ((casas[7].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
 		casas[7].value = jogador //preenche a casa com X ou O
 		casas[7].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[7].value)
@@ -278,7 +369,7 @@ function casa_8() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if ((casas[8].value == '_') && (vencedor != 'O') && (vencedor != 'X') && existe_vencedor == false) {
+	if ((casas[8].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
 		casas[8].value = jogador //preenche a casa com X ou O
 		casas[8].style.color = '#000000' //torna o valor da casa visível
 		console.log(casas[8].value)
@@ -463,78 +554,5 @@ function novopopup(){
 	var janela = window.open('popup.html', 'popup', 'width=600 height=700')
 	
 }
-var jogador_escolhe = 0;
-var vez_jogador1;
-var vez_jogador2;
-function quadrado(){
-	
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'quadrado';
 
-	}
-	else{
-		vez_jogador2 = 'quadrado';
-		jogador_escolhe = 0;
-		
-	}
-	
-}
-function circulo_preenchido(){
-	
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'circulo_preenchido';
-	    console.log(vez_jogador1)
-
-	}
-	else{
-		vez_jogador2 = 'circulo_preenchido';
-		jogador_escolhe = 0;
-		
-	}
-
-	
-}
-function circulo(){
-	
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'O';
-	    console.log(vez_jogador1)
-
-	}
-	else{
-		vez_jogador2 = 'O';
-		jogador_escolhe = 0;
-		
-	}
-
-	
-}
-function funcaox(){
-	
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'X';
-	    console.log(vez_jogador1)
-
-	}
-	else{
-		vez_jogador2 = 'X';
-		jogador_escolhe = 0;
-		
-	}
-	
-}
-function estrela(){
-
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'estrela';
-	    console.log(vez_jogador1)
-
-	}
-	else{
-		vez_jogador2 = 'estrela';
-		jogador_escolhe = 0;
-		
-	}
-	
-}
 
