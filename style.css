@@ -7,11 +7,9 @@
 
 
 body {
-
-	background: linear-gradient(90deg, rgba(8,248,255,1) 0%, rgba(103,27,235,1) 35%, rgba(255,0,206,1) 91%);
+    background: url("http://lh5.ggpht.com/_ETcIIPW8OKA/Sto1LLaK9RI/AAAAAAAAA-g/8OcPBWrK-pQ/arg-o-50-trans_thumb%5B3%5D.gif?imgmax=800") top left no-repeat, url("http://lh3.ggpht.com/_ETcIIPW8OKA/Sto1msnWNVI/AAAAAAAAA_o/g9FSJmelpLI/arg-x-50-trans_thumb%5B1%5D.gif?imgmax=800") top right no-repeat, url("file:///C:/Users/anace/Downloads/image-removebg-preview%20(2).png") no-repeat 930px 640px, linear-gradient(90deg, rgba(8,248,255,1) 0%, rgba(103,27,235,1) 35%, rgba(255,0,206,1) 91%) ;	
 	text-align: center;
 	font-style:italic;
-	
 }
 
 #vez{
@@ -61,24 +59,32 @@ input {
 	background-color: #5dcefa; 
 	color: white;
   }
+  .escolha_icone {
+	margin-top: 2%;
+	margin-bottom: 5px;
+	width: 12vw;
+	height:6vw;
+	font-size: 1.3em;
+	color: rgb(255, 255, 255);
+    border-radius: 25px;
+	border: none;
+	background: rgb(19, 143, 245);
+	cursor: pointer;
 
-  .botao_style{
-	color: transparent;/*deixa os inputs(_) transparentes*/
-	background-color:#ffffff;
-	font-size: 6vw; /*tamanho da fonte em view width*/
-	width: 8vw; /*largura*/
-	height:8vw;/*altura*/
-	border-color: aqua;	
   }
-  .botao_style:hover{
-	color: transparent;/*deixa os inputs(_) transparentes*/
-	background-color:#ffffff;
-	font-size: 6vw; /*tamanho da fonte em view width*/
-	width: 8vw; /*largura*/
-	height:8vw;/*altura*/
-	border-color: aqua;
+  .escolha_icone:hover{
+	background-color: #5dcefa; 
+	color: white;
   }
-
-  imagem:hover{
-	  display:block;
+  .seleciona_icone {
+	  background-color:rgb(19, 143, 245);
+	  border: transparent;
+	  border-radius: 30px;
+	  width: 200px;
+	  height: 60px;
+	  font-size: 40px;
+  }
+  .seleciona_icone:hover {
+	background-color: #5dcefa; 
+	color: white;
   }
