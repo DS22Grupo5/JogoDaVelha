@@ -10,131 +10,41 @@ var jogador = '_' //Define o jogador atual (_ = jogador indefinido; X = jogador 
 var vencedor = '_' //Define se há um vencedor ou não (_ = indefinido; X = jogador X, O = jogador O) 
 var numero_de_jogadas = 0 //serve para descobrirmos se houve ou não empate (número de jogadas=9, tem empate)
 var existe_vencedor = false//serve para verificar se houve ou não vencedor, impedindo que haja mais de um ganhador em uma partida
-var jogador_escolhe = 0;
-var vez_jogador1;
-var vez_jogador2;
-function quadrado(){
-	
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'quadrado';
-		jogador_escolhe = 1
-
-	}
-	else{
-		vez_jogador2 = 'quadrado';
-		jogador_escolhe = 0;
-		window.close()
-		SelecionarJogador()
-		
-	}
-	//Define qual jogador começa o jogo ao rodar o programa
-	
-}
-function circulo_preenchido(){
-	
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'circulo_preenchido';
-		jogador_escolhe = 1
-
-
-	}
-	else{
-		vez_jogador2 = 'circulo_preenchido';
-		jogador_escolhe = 0;
-		window.close()
-		SelecionarJogador()
-	
-	}
-	//Define qual jogador começa o jogo ao rodar o programa
-
-	
-}
-function circulo(){
-	
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'O';
-		jogador_escolhe = 1
-
-	}
-	else{
-		vez_jogador2 = 'O';
-		jogador_escolhe = 0;
-		window.close()
-		SelecionarJogador()
-		
-	}
-	//Define qual jogador começa o jogo ao rodar o programa
-	
-
-	
-}
-function funcaox(){
-	
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'X';
-		jogador_escolhe = 1
-
-	}
-	else{
-		vez_jogador2 = 'X';
-		jogador_escolhe = 0;
-		window.close();	
-		SelecionarJogador()
-	}
-	//Define qual jogador começa o jogo ao rodar o programa
-	
-}
-function estrela(){
-
-	if (jogador_escolhe == 0){
-		vez_jogador1 = 'estrela';
-		jogador_escolhe = 1
-	}
-	else{
-		vez_jogador2 = 'estrela';
-		jogador_escolhe = 0;
-		window.close()
-		SelecionarJogador()
-
-	}
-	//Define qual jogador começa o jogo ao rodar o programa
-	
-}
 
 function SelecionarJogador() { //Além de escolher quem inicia o jogo( no caso é a "O"), possibilita que troque a vez do jogador, mostrando no  canto inferior da tela
-	console.log(vez_jogador1)
+	console.log("funcao acessada")
 	console.log(vez_jogador2)
 
-	if (jogador == '_') { // Ao rodar o programa pela primeira vez, a O começa o jogo
+	if (jogador == '_') { // Ao 
 		jogador = vez_jogador1 //define o jogador O como atual
 		console.log("jogador: ", vez_jogador1)
-		label_jogador.innerHTML = "O" //exibe na página qual é o jogador atual
+		document.getElementById('jogador').innerHTML = vez_jogador1 //exibe na página qual é o jogador atual
 		label_jogador.style.color = '#ffffff' //deixa o texto na cor branca
 
 	} else if (jogador == vez_jogador1) {
 
 		jogador = vez_jogador2//define o jogador X como atual
-		label_jogador.innerHTML = "X" //exibe na página qual é o jogador atual
+		label_jogador.innerHTML = vez_jogador1 //exibe na página qual é o jogador atual
 		label_jogador.style.color = '#ffffff'//deixa o texto na cor branca
 	}
 
 	else {
-		jogador = "O" //define o jogador O como atual
-		label_jogador.innerHTML = "O" //exibe na página qual é o jogador atual
+		jogador = vez_jogador1 //define o jogador O como atual
+		label_jogador.innerHTML = vez_jogador1 //exibe na página qual é o jogador atual
 		label_jogador.style.color = '#ffffff' //deixa o texto na cor branca
 	}
 }
 
 //Element.addEventListener() registra quando um elemento sofre um evento, podendo colocar o tipo de evento e chamando uma função específica para cada um.
-casas[0].addEventListener('click', casa_0)
-casas[1].addEventListener('click', casa_1)
-casas[2].addEventListener('click', casa_2)
-casas[3].addEventListener('click', casa_3)
-casas[4].addEventListener('click', casa_4)
-casas[5].addEventListener('click', casa_5)
-casas[6].addEventListener('click', casa_6)
-casas[7].addEventListener('click', casa_7)
-casas[8].addEventListener('click', casa_8)
+// casas[0].addEventListener('click', casa_0)
+// casas[1].addEventListener('click', casa_1)
+// casas[2].addEventListener('click', casa_2)
+// casas[3].addEventListener('click', casa_3)
+// casas[4].addEventListener('click', casa_4)
+// casas[5].addEventListener('click', casa_5)
+// casas[6].addEventListener('click', casa_6)
+// casas[7].addEventListener('click', casa_7)
+// casas[8].addEventListener('click', casa_8)
 
 function casa_0() { // Quando clicar em um input, será atribuído O ou X por essa function
 
@@ -416,7 +326,7 @@ function casa_8() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 //Define a resposta ao evento de clique no botão Reiniciar
-b_reiniciar.addEventListener('click', reiniciar_partida)
+// b_reiniciar.addEventListener('click', reiniciar_partida)
 
 
 function reiniciar_partida() {
