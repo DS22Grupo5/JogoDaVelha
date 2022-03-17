@@ -84,3 +84,7 @@ input {
 	  height: 60px;
 	  font-size: 40px;
   }
+  .seleciona_icone:hover {
+	background-color: #5dcefa; 
+	color: white;
+  }
