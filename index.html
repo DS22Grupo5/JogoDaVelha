@@ -16,20 +16,29 @@
 
 <body>
 	<button class="escolha_icone" onclick="novopopup()"> Escolha seu ícone </button>
+	<div id="seleciona_icones" style="display:none;">
+		<h1> Seleção de ícones </h1><br>
+		<h3> Jogador 1 selecione seu ícone </h3><br>
+		<div><button class="seleciona_icone" onclick="quadrado()">&EmptySmallSquare;</button></div><br>
+		<div><button class="seleciona_icone" onclick="estrela()">&star;</button></div><br>
+		<div><button class="seleciona_icone" onclick="circulo_preenchido()"><img src="grao_de_cafe.png" style="width:60px;"></button></div><br>
+		<div><button class="seleciona_icone" onclick="circulo()">&xcirc;</button></div><br>
+		<div><button class="seleciona_icone" onclick="funcaox()"> X </button></div>
+	</div>
 	<div id="vez"><h1>Vez do Jogador <span id="jogador"></span></h1></div> <!--span é como a div, só que a div serve para bloco e o span para linhas-->
 	<span id="res">resposta</span> <!--A "div" pode ser utilizada para agrupar elementos para fins de estilos (usando class ou id)-->
 	<main> <!--É o que define o conteúdo principal de uma página para filtrar pesquisas-->
 		
 		<div> 
-			 <input type="button" onclik="casa1()" value="_"><input type="button" onclik="casa2()" value="_"><input type="button" onclik="casa3()" value="_"> 
+			 <input type="button" onclick="casa_0()" value="_"><input type="button" onclick="casa_1()" value="_"><input type="button" onclick="casa_2()" value="_"> 
 		</div>
 		
 		<div> 
-			<input type="button" onclik="casa4()" value="_"><input type="button" onclik="casa5()" value="_"><input type="button" onclik="casa6()" value="_"> 
+			<input type="button" onclick="casa_3()" value="_"><input type="button" onclick="casa_4()" value="_"><input type="button" onclick="casa_5()" value="_"> 
 		</div>
 
 		<div> 
-			<input type="button" onclik="casa7()" value="_"><input type="button" onclik="casa8()" value="_"><input type="button" onclik="casa9()" value="_"> 
+			<input type="button" onclick="casa_6()" value="_"><input type="button" onclick="casa_7()" value="_"><input type="button" onclick="casa_8()" value="_"> 
 		</div>
 	</main>
 
@@ -41,7 +50,6 @@
 	
 
 	<script src="script.js"></script>
-	<script src="script1.js"></script>
 </body>
 
 </html>
