@@ -73,6 +73,7 @@ function funcaox(){
 	console.log(vez_jogador1, ', ', vez_jogador2)
 }
 
+
 function estrela(){
 
 	if (jogador_escolhe == 0){
