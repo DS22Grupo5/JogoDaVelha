@@ -25,20 +25,20 @@
 		<div><button class="seleciona_icone" onclick="circulo()">&xcirc;</button></div><br>
 		<div><button class="seleciona_icone" onclick="funcaox()"> X </button></div>
 	</div>
-	<div id="vez"><h1>Vez do Jogador <span id="jogador"></span></h1></div> <!--span é como a div, só que a div serve para bloco e o span para linhas-->
+	<div id="vez"><h1>Vez do Jogador <span id="jogador"><span id="quadrado" style="display: none"></span></h1></div> <!--span é como a div, só que a div serve para bloco e o span para linhas-->
 	<span id="res">resposta</span> <!--A "div" pode ser utilizada para agrupar elementos para fins de estilos (usando class ou id)-->
 	<main> <!--É o que define o conteúdo principal de uma página para filtrar pesquisas-->
 		
 		<div> 
-			 <input type="button" onclick="casa_0()" value="_"><input type="button" onclick="casa_1()" value="_"><input type="button" onclick="casa_2()" value="_"> 
+			 <input type="button" onclick="casa_0()" id="casa_0" value="_"><input type="button" onclick="casa_1()" id="casa_1" value="_"><input type="button" onclick="casa_2()" id="casa_2" value='_'> 
 		</div>
 		
 		<div> 
-			<input type="button" onclick="casa_3()" value="_"><input type="button" onclick="casa_4()" value="_"><input type="button" onclick="casa_5()" value="_"> 
+			<input type="button" onclick="casa_3()" id="casa_3" value="_"><input type="button" onclick="casa_4()" id="casa_4" value="_"><input type="button" onclick="casa_5()" id="casa_5" value="_"> 
 		</div>
 
 		<div> 
-			<input type="button" onclick="casa_6()" value="_"><input type="button" onclick="casa_7()" value="_"><input type="button" onclick="casa_8()" value="_"> 
+			<input type="button" onclick="casa_6()" id="casa_6" value="_"><input type="button" onclick="casa_7()" id="casa_7" value="_"><input type="button" onclick="casa_8()" id="casa_8" value="_"> 
 		</div>
 	</main>
 

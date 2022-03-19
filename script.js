@@ -91,8 +91,12 @@ function estrela(){
 
 function SelecionarJogador() { //Além de escolher quem inicia o jogo( no caso é a "O"), possibilita que troque a vez do jogador, mostrando no  canto inferior da tela
 	
-	console.log("funcao acessada")
-	console.log(vez_jogador2)
+	z = document.getElementById('seleciona_icones')
+	console.log(z.style.display)
+	if(z.style.display == 'block'){
+		console.log('funcionou')
+		z.style.display = 'none';
+	}
 	try{
 	if (jogador == '_') { // Ao 
 		jogador = vez_jogador1 //define o jogador O como atual
@@ -101,10 +105,11 @@ function SelecionarJogador() { //Além de escolher quem inicia o jogo( no caso �
 		label_jogador.style.color = '#ffffff' //deixa o texto na cor branca
 
 	} else if (jogador == vez_jogador1) {
-
-		jogador = vez_jogador2//define o jogador X como atual
-		label_jogador.innerHTML = vez_jogador1 //exibe na página qual é o jogador atual
+		jogador = vez_jogador2
+		label_jogador.innerHTML = jogador//exibe na página qual é o jogador atual
 		label_jogador.style.color = '#ffffff'//deixa o texto na cor branca
+	
+		
 	}
 
 	else {
@@ -166,16 +171,22 @@ function casa_1() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
+	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+		console.log("elemento não selecionado")
+	}
+	else{
+	//se a casa estiver vazia e ninguém tiver vencido a partida
 	if ((casas[1].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
+		console.log('casa 1 acessada: ', jogador)
 		casas[1].value = jogador //preenche a casa com X ou O
 		casas[1].style.color = '#000000' //torna o valor da casa visível
+		console.log(casas[0].value)
 		const music=new Audio('som/acerto.mp3');
 		music.play();
-		console.log(casas[1].value)
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
+		//se o vencedor existe, imprime
 	}
-
 
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
@@ -186,6 +197,7 @@ function casa_1() { // Quando clicar em um input, será atribuído O ou X por es
 		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
+	}
 	}
 
 
@@ -195,18 +207,22 @@ function casa_2() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
+	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+		console.log("elemento não selecionado")
+	}
+	else{
+	//se a casa estiver vazia e ninguém tiver vencido a partida
 	if ((casas[2].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
+		console.log('casa 1 acessada: ', jogador)
 		casas[2].value = jogador //preenche a casa com X ou O
 		casas[2].style.color = '#000000' //torna o valor da casa visível
+		console.log(casas[0].value)
 		const music=new Audio('som/acerto.mp3');
 		music.play();
-		console.log(casas[2].value)
-
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
 		//se o vencedor existe, imprime
 	}
-
 
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
@@ -215,29 +231,31 @@ function casa_2() { // Quando clicar em um input, será atribuído O ou X por es
 			alert(`Empate!`)
 			
 		}, 500)
-
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
-
+	}
 
 }
 function casa_3() { // Quando clicar em um input, será atribuído O ou X por essa function
 
 
+	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+		console.log("elemento não selecionado")
+	}
+	else{
 	//se a casa estiver vazia e ninguém tiver vencido a partida
 	if ((casas[3].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
+		console.log('casa 1 acessada: ', jogador)
 		casas[3].value = jogador //preenche a casa com X ou O
 		casas[3].style.color = '#000000' //torna o valor da casa visível
+		console.log(casas[0].value)
 		const music=new Audio('som/acerto.mp3');
 		music.play();
-		console.log(casas[3].value)
-
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
 		//se o vencedor existe, imprime
 	}
-
 
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
@@ -246,9 +264,9 @@ function casa_3() { // Quando clicar em um input, será atribuído O ou X por es
 			alert(`Empate!`)
 			
 		}, 500)
-
 		console.log('Empate')
 		numero_de_jogadas = 0
+	}
 	}
 
 
@@ -258,18 +276,22 @@ function casa_4() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
+	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+		console.log("elemento não selecionado")
+	}
+	else{
+	//se a casa estiver vazia e ninguém tiver vencido a partida
 	if ((casas[4].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
+		console.log('casa 1 acessada: ', jogador)
 		casas[4].value = jogador //preenche a casa com X ou O
 		casas[4].style.color = '#000000' //torna o valor da casa visível
+		console.log(casas[0].value)
 		const music=new Audio('som/acerto.mp3');
 		music.play();
-		console.log(casas[4].value)
-
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
 		//se o vencedor existe, imprime
 	}
-
 
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
@@ -281,7 +303,7 @@ function casa_4() { // Quando clicar em um input, será atribuído O ou X por es
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
-
+	}
 
 }
 
@@ -289,18 +311,22 @@ function casa_5() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
+	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+		console.log("elemento não selecionado")
+	}
+	else{
+	//se a casa estiver vazia e ninguém tiver vencido a partida
 	if ((casas[5].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
+		console.log('casa 1 acessada: ', jogador)
 		casas[5].value = jogador //preenche a casa com X ou O
 		casas[5].style.color = '#000000' //torna o valor da casa visível
+		console.log(casas[0].value)
 		const music=new Audio('som/acerto.mp3');
 		music.play();
-		console.log(casas[5].value)
-
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
 		//se o vencedor existe, imprime
 	}
-
 
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
@@ -311,6 +337,7 @@ function casa_5() { // Quando clicar em um input, será atribuído O ou X por es
 		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
+	}
 	}
 
 
@@ -320,18 +347,22 @@ function casa_6() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
+	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+		console.log("elemento não selecionado")
+	}
+	else{
+	//se a casa estiver vazia e ninguém tiver vencido a partida
 	if ((casas[6].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
+		console.log('casa 1 acessada: ', jogador)
 		casas[6].value = jogador //preenche a casa com X ou O
 		casas[6].style.color = '#000000' //torna o valor da casa visível
+		console.log(casas[0].value)
 		const music=new Audio('som/acerto.mp3');
 		music.play();
-		console.log(casas[6].value)
-
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
 		//se o vencedor existe, imprime
 	}
-
 
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
@@ -343,7 +374,7 @@ function casa_6() { // Quando clicar em um input, será atribuído O ou X por es
 		console.log('Empate')
 		numero_de_jogadas = 0
 	}
-
+	}
 
 }
 
@@ -351,18 +382,22 @@ function casa_7() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
+	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+		console.log("elemento não selecionado")
+	}
+	else{
+	//se a casa estiver vazia e ninguém tiver vencido a partida
 	if ((casas[7].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
+		console.log('casa 1 acessada: ', jogador)
 		casas[7].value = jogador //preenche a casa com X ou O
 		casas[7].style.color = '#000000' //torna o valor da casa visível
+		console.log(casas[0].value)
 		const music=new Audio('som/acerto.mp3');
 		music.play();
-		console.log(casas[7].value)
-
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
 		//se o vencedor existe, imprime
 	}
-
 
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
@@ -373,6 +408,7 @@ function casa_7() { // Quando clicar em um input, será atribuído O ou X por es
 		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
+	}
 	}
 
 
@@ -382,18 +418,22 @@ function casa_8() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
+	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+		console.log("elemento não selecionado")
+	}
+	else{
+	//se a casa estiver vazia e ninguém tiver vencido a partida
 	if ((casas[8].value == '_') && (vencedor != vez_jogador1) && (vencedor != vez_jogador2) && existe_vencedor == false) {
+		console.log('casa 1 acessada: ', jogador)
 		casas[8].value = jogador //preenche a casa com X ou O
 		casas[8].style.color = '#000000' //torna o valor da casa visível
+		console.log(casas[0].value)
 		const music=new Audio('som/acerto.mp3');
 		music.play();
-		console.log(casas[8].value)
-
 		SelecionarJogador() //função que troca a vez do jogador, a ser definida depois
 		verificador_vitoria(vencedor) //Executa a função vitoria() que defineremos depois, ela retorna o vencedor da partida, caso exista.
 		//se o vencedor existe, imprime
 	}
-
 
 	if (numero_de_jogadas == 9 && vencedor == '_') {
 		res.style.color = '#ffffff'
@@ -404,6 +444,7 @@ function casa_8() { // Quando clicar em um input, será atribuído O ou X por es
 		}, 500)
 		console.log('Empate')
 		numero_de_jogadas = 0
+	}
 	}
 
 

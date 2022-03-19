@@ -88,3 +88,13 @@ input {
 	background-color: #5dcefa; 
 	color: white;
   }
+
+.botao_jogo {
+	
+	color: transparent;/*deixa os inputs(_) transparentes*/
+	background-color:#ffffff;
+	font-size: 6vw; /*tamanho da fonte em view width*/
+	width: 8vw; /*largura*/
+	height:8vw;/*altura*/
+	border-color: aqua;	
+}
