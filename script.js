@@ -17,12 +17,12 @@ var vez_jogador2 = '';
 function quadrado(){
 	
 	if (jogador_escolhe == 0){
-		vez_jogador1 = 'quadrado';
+		vez_jogador1 = 'Y';
 		jogador_escolhe = 1
 
 	}
 	else{
-		vez_jogador2 = 'quadrado';
+		vez_jogador2 = 'Y';
 		jogador_escolhe = 0;
 		SelecionarJogador()
 		
@@ -32,11 +32,11 @@ function quadrado(){
 function circulo_preenchido(){
 	
 	if (jogador_escolhe == 0){
-		vez_jogador1 = 'cafe';
+		vez_jogador1 = 'B';
 		jogador_escolhe = 1
 	}
 	else{
-		vez_jogador2 = 'cafe';
+		vez_jogador2 = 'B';
 		jogador_escolhe = 0;
 		SelecionarJogador()
 	}
@@ -76,11 +76,11 @@ function funcaox(){
 function estrela(){
 
 	if (jogador_escolhe == 0){
-		vez_jogador1 = 'estrela';
+		vez_jogador1 = 'W';
 		jogador_escolhe = 1
 	}
 	else{
-		vez_jogador2 = 'estrela';
+		vez_jogador2 = 'W';
 		jogador_escolhe = 0;
 		SelecionarJogador()
 
@@ -136,7 +136,7 @@ function SelecionarJogador() { //Além de escolher quem inicia o jogo( no caso �
 
 function casa_0() { // Quando clicar em um input, será atribuído O ou X por essa function
 
-	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+	if (vez_jogador1 != 'Y' && vez_jogador1 != 'B' && vez_jogador1 != 'W' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
 		console.log("elemento não selecionado")
 	}
 	else{
@@ -171,7 +171,7 @@ function casa_1() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+	if (vez_jogador1 != 'Y' && vez_jogador1 != 'B' && vez_jogador1 != 'W' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
 		console.log("elemento não selecionado")
 	}
 	else{
@@ -207,7 +207,7 @@ function casa_2() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+	if (vez_jogador1 != 'Y' && vez_jogador1 != 'B' && vez_jogador1 != 'W' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
 		console.log("elemento não selecionado")
 	}
 	else{
@@ -240,7 +240,7 @@ function casa_2() { // Quando clicar em um input, será atribuído O ou X por es
 function casa_3() { // Quando clicar em um input, será atribuído O ou X por essa function
 
 
-	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+	if (vez_jogador1 != 'Y' && vez_jogador1 != 'B' && vez_jogador1 != 'W' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
 		console.log("elemento não selecionado")
 	}
 	else{
@@ -276,7 +276,7 @@ function casa_4() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+	if (vez_jogador1 != 'Y' && vez_jogador1 != 'B' && vez_jogador1 != 'W' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
 		console.log("elemento não selecionado")
 	}
 	else{
@@ -311,7 +311,7 @@ function casa_5() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+	if (vez_jogador1 != 'Y' && vez_jogador1 != 'B' && vez_jogador1 != 'W' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
 		console.log("elemento não selecionado")
 	}
 	else{
@@ -347,7 +347,7 @@ function casa_6() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+	if (vez_jogador1 != 'Y' && vez_jogador1 != 'B' && vez_jogador1 != 'W' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
 		console.log("elemento não selecionado")
 	}
 	else{
@@ -382,7 +382,7 @@ function casa_7() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+	if (vez_jogador1 != 'Y' && vez_jogador1 != 'B' && vez_jogador1 != 'W' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
 		console.log("elemento não selecionado")
 	}
 	else{
@@ -418,7 +418,7 @@ function casa_8() { // Quando clicar em um input, será atribuído O ou X por es
 
 
 	//se a casa estiver vazia e ninguém tiver vencido a partida
-	if (vez_jogador1 != 'estrela' && vez_jogador1 != 'cafe' && vez_jogador1 != 'quadrado' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
+	if (vez_jogador1 != 'Y' && vez_jogador1 != 'B' && vez_jogador1 != 'W' && vez_jogador1 != 'X' && vez_jogador1 != 'O'){
 		console.log("elemento não selecionado")
 	}
 	else{
